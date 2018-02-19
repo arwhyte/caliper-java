@@ -29,6 +29,7 @@ import org.imsglobal.caliper.entities.agent.Person;
 import org.imsglobal.caliper.entities.agent.Role;
 import org.imsglobal.caliper.entities.agent.SoftwareApplication;
 import org.imsglobal.caliper.entities.agent.Status;
+import org.imsglobal.caliper.entities.resource.WebPage;
 import org.imsglobal.caliper.entities.session.Session;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
@@ -47,6 +48,7 @@ public class ToolLaunchEventLaunchedTest {
     private String id;
     private Person actor;
     private SoftwareApplication object, edApp;
+    private WebPage referrer;
     private CourseSection group;
     private Membership membership;
     private Session session;
@@ -54,6 +56,7 @@ public class ToolLaunchEventLaunchedTest {
 
     private static final String BASE_COM_IRI = "https://example.com";
     private static final String BASE_EDU_IRI = "https://example.edu";
+    private static final String BASE_SECTION_IRI = "https://example.edu/terms/201801/courses/7/sections/1";
 
     @Before
     public void setUp() throws Exception {
@@ -67,14 +70,16 @@ public class ToolLaunchEventLaunchedTest {
 
         edApp = SoftwareApplication.builder().id(BASE_EDU_IRI).build();
 
+        referrer = WebPage.builder().id(BASE_SECTION_IRI.concat("/pages/1")).build();
+
         group = CourseSection.builder()
-            .id(BASE_EDU_IRI.concat("/terms/201801/courses/7/sections/1"))
+            .id(BASE_SECTION_IRI)
             .courseNumber("CPS 435-01")
             .academicSession("Fall 2018")
             .build();
 
         membership = Membership.builder()
-            .id(BASE_EDU_IRI.concat("/terms/201801/courses/7/sections/1/rosters/1"))
+            .id(BASE_SECTION_IRI.concat("/rosters/1"))
             .member(Person.builder().id(actor.getId()).coercedToId(true).build())
             .organization(CourseSection.builder().id(group.getId()).coercedToId(true).build())
             .status(Status.ACTIVE)
@@ -124,6 +129,7 @@ public class ToolLaunchEventLaunchedTest {
             .object(object)
             .eventTime(new DateTime(2018, 11, 15, 10, 15, 0, 0, DateTimeZone.UTC))
             .edApp(edApp)
+            .referrer(referrer)
             .group(group)
             .membership(membership)
             .session(session)
