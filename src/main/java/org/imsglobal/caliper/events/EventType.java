@@ -34,6 +34,7 @@ public enum EventType implements CaliperEventType {
     READING("ReadingEvent"),
     SESSION("SessionEvent"),
     THREAD("ThreadEvent"),
+    TOOL_LAUNCH("ToolLaunchEvent"),
     TOOL_USE("ToolUseEvent"),
     VIEW("ViewEvent");
 
