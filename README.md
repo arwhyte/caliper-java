@@ -11,7 +11,7 @@ Caliper also defines an application programming interface (the Sensor API&trade;
 * __develop__: unstable development branch.  Current work that targets a future release is merged to this branch.
 
 ## Tags
-*caliper-java* releases are tagged and versioned MAJOR.MINOR.PATCH\[-label\] (e.g., 1.1.0).  Pre-release tags are identified with an extensions label (e.g., "1.2.0-RC01").  The tags are stored in this repository.
+*caliper-java* releases are tagged and versioned MAJOR.MINOR.PATCH\[-label\] (e.g., 1.2.0).  Pre-release tags are identified with an extensions label (e.g., "1.2.0-RC01").  The tags are stored in this repository.
 
 ## Getting Started
 Fork the IMS Global *caliper-java* project to your Github account and then clone your copy to your local development machine.  
@@ -47,7 +47,7 @@ You can specify *caliper-java* as a project or module dependency in the appropri
 <dependency>
     <groupId>org.imsglobal.caliper</groupId>
     <artifactId>caliper-java</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 
