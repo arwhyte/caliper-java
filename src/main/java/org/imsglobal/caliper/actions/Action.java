@@ -50,6 +50,7 @@ public enum Action {
     HIGHLIGHTED("Highlighted"),
     JUMPED_TO("JumpedTo"),
     IDENTIFIED("Identified"),
+    LAUNCHED("Launched"),
     LIKED("Liked"),
     LINKED("Linked"),
     LOGGED_IN("LoggedIn"),
