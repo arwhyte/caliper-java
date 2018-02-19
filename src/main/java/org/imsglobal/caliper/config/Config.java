@@ -17,12 +17,12 @@ public class Config {
      * Default data format and version.
      */
     public static final DataFormat DATA_FORMAT = DataFormat.CALIPER_JSONLD;
-    public static final String DATA_VERSION = "http://purl.imsglobal.org/ctx/caliper/v1p1";
+    public static final String DATA_VERSION = "http://purl.imsglobal.org/ctx/caliper/v1p2";
 
     /**
      * Default IMS Caliper external context document IRI.
      */
-    public static final String JSONLD_EXTERNAL_CALIPER_CONTEXT = "http://purl.imsglobal.org/ctx/caliper/v1p1";
+    public static final String JSONLD_EXTERNAL_CALIPER_CONTEXT = "http://purl.imsglobal.org/ctx/caliper/v1p2";
 
     /**
      * Default test fixtures directory path
